@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eye Closure Demo</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: system-ui, sans-serif;
+        color: #172033;
+        background: #f3f5f9;
+      }
+
+      body {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 18px;
+      }
+
+      h1 { margin-bottom: 8px; }
+      .card {
+        background: white;
+        border: 1px solid #dfe4ee;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 18px 0;
+      }
+
+      .notice {
+        border-left: 4px solid #b45309;
+        background: #fff7ed;
+        padding: 12px 14px;
+      }
+
+      .error {
+        border-left: 4px solid #b91c1c;
+        background: #fef2f2;
+        padding: 12px 14px;
+      }
+
+      video {
+        width: 100%;
+        max-height: 440px;
+        background: #111827;
+        border-radius: 8px;
+      }
+
+      button {
+        padding: 10px 16px;
+        border: 0;
+        border-radius: 8px;
+        color: white;
+        background: #2457c5;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        opacity: .6;
+        cursor: not-allowed;
+      }
+
+      #status { font-size: 1.15rem; font-weight: 650; }
+      #details, #message { color: #4b5563; }
+    </style>
+  </head>
+  <body>
+    <h1>Eye-closure demo</h1>
+    <p>A local prototype that estimates whether eyes appear open or closed.</p>
+
+    <section class="card notice" aria-label="Important limitation">
+      <strong>Not a syncope detector or medical device.</strong>
+      This demo cannot determine whether someone has fainted and must not be used
+      for medical decisions, emergency monitoring, or as a substitute for care.
+      The eye-closure estimate is experimental and may be inaccurate.
+    </section>
+
+    {% if model_error %}
+    <section class="card error" role="alert">
+      <strong>Detection is not ready.</strong>
+      <p>{{ model_error }}</p>
+      <p>See the project README for the model setup instructions.</p>
+    </section>
+    {% endif %}
+
+    <section class="card">
+      <video id="camera" autoplay muted playsinline aria-label="Camera preview"></video>
+      <canvas id="frame" hidden></canvas>
+      <p id="status" aria-live="polite">
+        {% if model_error %}Model unavailable{% else %}Camera stopped{% endif %}
+      </p>
+      <p id="details">
+        {% if model_error %}Resolve the model setup issue above before starting.{% else %}No camera frames are being analyzed.{% endif %}
+      </p>
+      <p id="message" role="status"></p>
+      <button id="toggle" type="button" {% if model_error %}disabled{% endif %}>Start camera</button>
+    </section>
+
+    <script>
+      const video = document.querySelector("#camera");
+      const canvas = document.querySelector("#frame");
+      const statusText = document.querySelector("#status");
+      const detailsText = document.querySelector("#details");
+      const messageText = document.querySelector("#message");
+      const toggleButton = document.querySelector("#toggle");
+      let stream = null;
+      let timer = null;
+      let busy = false;
+      let closedSince = null;
+
+      function stopCamera() {
+        if (timer !== null) {
+          window.clearInterval(timer);
+          timer = null;
+        }
+        if (stream) {
+          stream.getTracks().forEach((track) => track.stop());
+          stream = null;
+        }
+        video.srcObject = null;
+        toggleButton.textContent = "Start camera";
+        statusText.textContent = "Camera stopped";
+        detailsText.textContent = "No camera frames are being analyzed.";
+        closedSince = null;
+      }
+
+      async function analyzeFrame() {
+        if (busy || !stream || video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) {
+          return;
+        }
+        busy = true;
+        canvas.width = 480;
+        canvas.height = Math.round(480 * video.videoHeight / video.videoWidth);
+        const context = canvas.getContext("2d");
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        try {
+          const response = await fetch("/analyze", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ image: canvas.toDataURL("image/jpeg", 0.7) })
+          });
+          const result = await response.json();
+          if (!response.ok) {
+            throw new Error(result.error || "Frame analysis failed.");
+          }
+
+          messageText.textContent = "";
+          if (!result.face_detected) {
+            closedSince = null;
+            statusText.textContent = "No face detected";
+            detailsText.textContent = "Center your face in the camera view.";
+          } else if (result.eyes_closed) {
+            if (closedSince === null) closedSince = Date.now();
+            const seconds = ((Date.now() - closedSince) / 1000).toFixed(1);
+            statusText.textContent = "Eyes appear closed";
+            detailsText.textContent =
+              `Estimated closed duration: ${seconds} s · ` +
+              `eye ratios: ${result.left_eye_ratio}, ${result.right_eye_ratio}`;
+          } else {
+            closedSince = null;
+            statusText.textContent = "Eyes appear open";
+            detailsText.textContent =
+              `Eye ratios: ${result.left_eye_ratio}, ${result.right_eye_ratio}`;
+          }
+        } catch (error) {
+          messageText.textContent = error.message;
+        } finally {
+          busy = false;
+        }
+      }
+
+      toggleButton.addEventListener("click", async () => {
+        if (stream) {
+          stopCamera();
+          return;
+        }
+        if (!navigator.mediaDevices?.getUserMedia) {
+          messageText.textContent = "Camera access is not available in this browser.";
+          return;
+        }
+        try {
+          stream = await navigator.mediaDevices.getUserMedia({
+            audio: false,
+            video: { facingMode: "user" }
+          });
+          video.srcObject = stream;
+          await video.play();
+          toggleButton.textContent = "Stop camera";
+          messageText.textContent = "";
+          timer = window.setInterval(analyzeFrame, 350);
+        } catch (error) {
+          stopCamera();
+          messageText.textContent = `Could not start the camera: ${error.message}`;
+        }
+      });
+
+      window.addEventListener("pagehide", stopCamera);
+    </script>
+  </body>
+</html>

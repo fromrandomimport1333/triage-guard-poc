@@ -1,0 +1,10 @@
+{
+  "execution_scope": "35 synthetic decision scenarios: 24 adapted original + 8 CR-01 edge cases + 3 onset-ordered cases",
+  "NOT": "clinical accuracy, independent outcome validation, real vehicle safety, actual SMS or EMS",
+  "count": 35,
+  "oem_evaluation_requests": 15,
+  "contact_submission_eligible": 17,
+  "ems_submission_eligible": 17,
+  "medical_unknown": 12,
+  "no_transport_or_dispatch_executed": true
+}

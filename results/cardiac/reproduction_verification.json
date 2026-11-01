@@ -1,0 +1,23 @@
+{
+  "clean_environment": true,
+  "system_site_packages": false,
+  "all_checks_passed": true,
+  "checks": {
+    "splits.csv": "equal within 1e-12; nonnumeric fields exact",
+    "test_predictions.csv": "equal within 1e-12; nonnumeric fields exact",
+    "comparison.csv": "equal within 1e-12; nonnumeric fields exact",
+    "per_alarm.csv": "equal within 1e-12; nonnumeric fields exact",
+    "development_oof.csv": "equal within 1e-12; nonnumeric fields exact",
+    "development_thresholds.csv": "equal within 1e-12; nonnumeric fields exact",
+    "features.csv": "equal within 1e-12; nonnumeric fields exact",
+    "model_ecg.json": "exact parsed JSON equality",
+    "model_multimodal.json": "exact parsed JSON equality",
+    "dataset_manifest.json": "exact parsed JSON equality",
+    "dataset_audit.json": "exact parsed JSON equality"
+  },
+  "all_metrics_and_bootstrap_intervals_exact": true,
+  "clean_tests_passed": 100,
+  "timing_compared": false,
+  "reason": "Wall-clock timing varies; numerical outputs independently reproduced",
+  "clean_environment_packages": "requirements-environment-lock.txt"
+}

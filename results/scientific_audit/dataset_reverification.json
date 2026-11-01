@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-31",
+  "records": 750,
+  "true": 294,
+  "false": 456,
+  "archive_sha256": "1f191ca45f555f05ae23be67c34923e2e1624051669bd24a0e49bdad7e5ef686",
+  "all_record_header_labels_match": true,
+  "all_file_checksums_match": true,
+  "official": {
+    "ALARMS": {
+      "url": "https://physionet.org/files/challenge-2015/1.0.0/training/ALARMS",
+      "sha256": "9a19f94b56e6d55f9bb34f8f9a2d2e3323113eef974be8e7ea9d3c70e01e14aa",
+      "matches_local": true
+    },
+    "SHA256SUMS": {
+      "url": "https://physionet.org/files/challenge-2015/1.0.0/training/SHA256SUMS",
+      "sha256": "7432ea83a178a467d087746d6c1be4b9ea94ea374f30de1079d40d9bd5da0599",
+      "matches_local": true
+    }
+  },
+  "published_table_source": "Clifford et al. CinC 2015 Table 1, p.275; https://www.cinc.org/archives/2015/pdf/0273.pdf",
+  "discrepancy_explanation": "Both a historical publication/current-file mismatch and changes in alarm-type totals are observed. No version history establishes cause; cannot attribute the difference solely to two relabeled records."
+}

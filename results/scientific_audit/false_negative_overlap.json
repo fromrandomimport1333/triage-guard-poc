@@ -1,0 +1,17 @@
+{
+  "ecg": [
+    "a654s",
+    "v448s",
+    "v534s"
+  ],
+  "multimodal": [
+    "a167l",
+    "v534s"
+  ],
+  "pulse_rule": [
+    "b832s"
+  ],
+  "ecg_multimodal_intersection": [
+    "v534s"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "all_records": {
+    "n": 750,
+    "no_valid_ecg": 29,
+    "no_valid_pulse": 11,
+    "rate_conflict": 455
+  },
+  "methods": {
+    "ecg": {
+      "n": 225,
+      "abstentions": 33,
+      "prediction_failure_count": 0,
+      "prediction_failure_rate": 0.0,
+      "reason_counts": {
+        "model_decision": 192,
+        "threshold_uncertainty": 25,
+        "missing_or_invalid_ecg": 8
+      },
+      "calibration_assessed": false
+    },
+    "multimodal": {
+      "n": 225,
+      "abstentions": 160,
+      "prediction_failure_count": 0,
+      "prediction_failure_rate": 0.0,
+      "reason_counts": {
+        "modality_rate_conflict": 138,
+        "model_decision": 65,
+        "threshold_uncertainty": 30,
+        "missing_or_invalid_pulse": 3,
+        "missing_or_invalid_ecg": 8
+      },
+      "calibration_assessed": false
+    }
+  },
+  "note": "Quality failure can be genuine absent physiology or artifact; fallback preserves alarms. Counts may overlap."
+}

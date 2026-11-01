@@ -1,0 +1,7 @@
+method,record,alarm,true_alarm,preserve_alarm,abstain,score
+pulse_rule,b832s,Bradycardia,1,0,False,
+ecg,v534s,Ventricular_Tachycardia,1,0,False,0.0354450131938009
+ecg,v448s,Ventricular_Tachycardia,1,0,False,0.032926034443283
+ecg,a654s,Asystole,1,0,False,0.0020617274499428
+multimodal,v534s,Ventricular_Tachycardia,1,0,False,0.1400680360342572
+multimodal,a167l,Asystole,1,0,False,0.186705432814802

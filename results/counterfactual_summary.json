@@ -1,0 +1,14 @@
+{
+  "test_kind": "finite 8-axis boolean policy enumeration, not field validation",
+  "independent_combinations": 256,
+  "policy_evaluations": 512,
+  "invariant_failures": 0,
+  "requests_each_medical_level": 2,
+  "medical_score_invariance_pairs": 256,
+  "counterexample_false_request_from_jointly_misleading_sources": true,
+  "counterexample_missed_request_when_true_incapacity_but_camera_missing": true,
+  "real_world_false_alarm_rate_supported": false,
+  "clinical_detection_supported": false,
+  "safety_certification_supported": false,
+  "warning": "source IDs are declarations; medical/capacity evidence and timing remain simulated"
+}

@@ -1,0 +1,894 @@
+[
+  {
+    "record": "a167l",
+    "alarm": "Asystole",
+    "truth": 1,
+    "missed_by": [
+      "multimodal"
+    ],
+    "channels": [
+      {
+        "channel": "II",
+        "kind": "ecg",
+        "unit": "mV",
+        "nonfinite_count": 0,
+        "minimum": -0.10493827160493827,
+        "maximum": 0.5027865961199295,
+        "spread": 0.27908289241622575,
+        "flat_fraction": 0.0029337244965995466,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "V",
+        "kind": "ecg",
+        "unit": "mV",
+        "nonfinite_count": 0,
+        "minimum": -0.5675133689839572,
+        "maximum": 0.4109625668449198,
+        "spread": 0.3292413101604278,
+        "flat_fraction": 0.007200960128017069,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "PLETH",
+        "kind": "pulse",
+        "unit": "NU",
+        "nonfinite_count": 0,
+        "minimum": 2.4233897559903275,
+        "maximum": 2.7043306221147505,
+        "spread": 0.002857770938667681,
+        "flat_fraction": 0.0,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "ABP",
+        "kind": "pulse",
+        "unit": "mmHg",
+        "nonfinite_count": 0,
+        "minimum": 14.368121442125236,
+        "maximum": 21.06641366223909,
+        "spread": 3.7762808349146066,
+        "flat_fraction": 0.0220029337244966,
+        "gate_reasons": [],
+        "usable": true
+      }
+    ],
+    "features": {
+      "alarm_Asystole": 1.0,
+      "alarm_Bradycardia": 0.0,
+      "alarm_Tachycardia": 0.0,
+      "alarm_Ventricular_Tachycardia": 0.0,
+      "alarm_Ventricular_Flutter_Fib": 0.0,
+      "ecg0_valid": 1.0,
+      "ecg0_30_spread": 0.27908289241622575,
+      "ecg0_30_flat": 0.0029337244965995466,
+      "ecg0_30_rate": 144.0,
+      "ecg0_30_rr_cv": 0.4096583343549412,
+      "ecg0_30_max_gap": 1.12,
+      "ecg0_30_spectral_entropy": 0.6684074726240407,
+      "ecg0_30_high_power": 0.2666689339879636,
+      "ecg0_10_spread": 0.13486596119929373,
+      "ecg0_10_flat": 0.0028011204481792717,
+      "ecg0_10_rate": 162.0,
+      "ecg0_10_rr_cv": 0.19747023673771189,
+      "ecg0_10_max_gap": 0.568,
+      "ecg0_10_spectral_entropy": 0.658716707619179,
+      "ecg0_10_high_power": 0.24880264390058193,
+      "ecg1_valid": 1.0,
+      "ecg1_30_spread": 0.3292413101604278,
+      "ecg1_30_flat": 0.007200960128017069,
+      "ecg1_30_rate": 138.0,
+      "ecg1_30_rr_cv": 0.45058837925746176,
+      "ecg1_30_max_gap": 1.324,
+      "ecg1_30_spectral_entropy": 0.6315361950320142,
+      "ecg1_30_high_power": 0.15671768294675043,
+      "ecg1_10_spread": 0.12855280748663098,
+      "ecg1_10_flat": 0.008003201280512205,
+      "ecg1_10_rate": 156.0,
+      "ecg1_10_rr_cv": 0.27577750772167864,
+      "ecg1_10_max_gap": 0.684,
+      "ecg1_10_spectral_entropy": 0.6370195005306074,
+      "ecg1_10_high_power": 0.17605260928988395,
+      "pulse_valid": 1.0,
+      "pulse_30_spread": 0.002857770938667681,
+      "pulse_30_flat": 0.0,
+      "pulse_30_rate": 164.0,
+      "pulse_30_rr_cv": 0.6824040606250215,
+      "pulse_30_max_gap": 2.108,
+      "pulse_30_spectral_entropy": 0.406165629014001,
+      "pulse_30_high_power": 4.5302204443971424e-05,
+      "pulse_10_spread": 0.002857770938667681,
+      "pulse_10_flat": 0.0,
+      "pulse_10_rate": 198.0,
+      "pulse_10_rr_cv": 0.0942159500312002,
+      "pulse_10_max_gap": 0.4,
+      "pulse_10_spectral_entropy": 0.13934446282158694,
+      "pulse_10_high_power": 0.00017597317938122933,
+      "rate_disagreement": 39.0
+    },
+    "model_decisions": {
+      "ecg": {
+        "preserve_alarm": true,
+        "abstain": false,
+        "reason": "model_decision",
+        "score": 0.30464590754965437,
+        "threshold": 0.12,
+        "uncertainty_band": 0.05,
+        "strongest_negative_logit_terms": [
+          {
+            "feature": "alarm_Asystole",
+            "contribution": -1.5922743696889967
+          },
+          {
+            "feature": "alarm_Tachycardia",
+            "contribution": -0.6984714785432415
+          },
+          {
+            "feature": "ecg0_10_rr_cv",
+            "contribution": -0.5644873424532387
+          },
+          {
+            "feature": "ecg0_10_high_power",
+            "contribution": -0.34996366110481103
+          },
+          {
+            "feature": "ecg1_10_flat",
+            "contribution": -0.31107582841349485
+          }
+        ],
+        "interpretation": "Associations of this fitted model; not causal or clinical explanations"
+      },
+      "multimodal": {
+        "preserve_alarm": false,
+        "abstain": false,
+        "reason": "model_decision",
+        "score": 0.18670543281480204,
+        "threshold": 0.29,
+        "uncertainty_band": 0.05,
+        "strongest_negative_logit_terms": [
+          {
+            "feature": "alarm_Asystole",
+            "contribution": -1.166373674040134
+          },
+          {
+            "feature": "pulse_10_spectral_entropy",
+            "contribution": -0.7533211542929835
+          },
+          {
+            "feature": "alarm_Tachycardia",
+            "contribution": -0.48082331132384115
+          },
+          {
+            "feature": "pulse_10_rr_cv",
+            "contribution": -0.34478394864005624
+          },
+          {
+            "feature": "pulse_10_max_gap",
+            "contribution": -0.33376245958083123
+          }
+        ],
+        "interpretation": "Associations of this fitted model; not causal or clinical explanations"
+      }
+    },
+    "pulse_rule": {
+      "preserve_alarm": true,
+      "abstain": false,
+      "reason": "fixed_pulse_rate_rule"
+    }
+  },
+  {
+    "record": "a654s",
+    "alarm": "Asystole",
+    "truth": 1,
+    "missed_by": [
+      "ecg"
+    ],
+    "channels": [
+      {
+        "channel": "II",
+        "kind": "ecg",
+        "unit": "mV",
+        "nonfinite_count": 0,
+        "minimum": -0.6776872134488029,
+        "maximum": 0.4304635761589404,
+        "spread": 0.1771115639327559,
+        "flat_fraction": 0.23816508867849046,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "V",
+        "kind": "ecg",
+        "unit": "mV",
+        "nonfinite_count": 0,
+        "minimum": -0.15625759416767923,
+        "maximum": 0.35791008505467803,
+        "spread": 0.03908626974483547,
+        "flat_fraction": 0.20629417255634083,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "PLETH",
+        "kind": "pulse",
+        "unit": "NU",
+        "nonfinite_count": 0,
+        "minimum": -0.9489432935760619,
+        "maximum": 1.3222431471019043,
+        "spread": 0.6794413057124922,
+        "flat_fraction": 0.06307507667689025,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "RESP",
+        "kind": "unused",
+        "unit": "NU",
+        "nonfinite_count": 0,
+        "minimum": -0.11244153414405987,
+        "maximum": 0.09747427502338635,
+        "spread": 0.13578578110383532,
+        "flat_fraction": 0.05227363648486465,
+        "gate_reasons": [],
+        "usable": false
+      }
+    ],
+    "features": {
+      "alarm_Asystole": 1.0,
+      "alarm_Bradycardia": 0.0,
+      "alarm_Tachycardia": 0.0,
+      "alarm_Ventricular_Tachycardia": 0.0,
+      "alarm_Ventricular_Flutter_Fib": 0.0,
+      "ecg0_valid": 1.0,
+      "ecg0_30_spread": 0.1771115639327559,
+      "ecg0_30_flat": 0.23816508867849046,
+      "ecg0_30_rate": 76.0,
+      "ecg0_30_rr_cv": 0.8781289770966495,
+      "ecg0_30_max_gap": 3.288,
+      "ecg0_30_spectral_entropy": 0.6133270157510511,
+      "ecg0_30_high_power": 0.04310735189680808,
+      "ecg0_10_spread": 0.14928680590932233,
+      "ecg0_10_flat": 0.2605042016806723,
+      "ecg0_10_rate": 96.0,
+      "ecg0_10_rr_cv": 0.6621696538796015,
+      "ecg0_10_max_gap": 1.508,
+      "ecg0_10_spectral_entropy": 0.6063587923938683,
+      "ecg0_10_high_power": 0.03870360114900767,
+      "ecg1_valid": 1.0,
+      "ecg1_30_spread": 0.03908626974483547,
+      "ecg1_30_flat": 0.20629417255634083,
+      "ecg1_30_rate": 100.0,
+      "ecg1_30_rr_cv": 0.8616276248313538,
+      "ecg1_30_max_gap": 2.756,
+      "ecg1_30_spectral_entropy": 0.6037381739866008,
+      "ecg1_30_high_power": 0.028727754640858763,
+      "ecg1_10_spread": 0.041793438639125075,
+      "ecg1_10_flat": 0.26450580232092835,
+      "ecg1_10_rate": 138.0,
+      "ecg1_10_rr_cv": 0.4067739744301101,
+      "ecg1_10_max_gap": 0.996,
+      "ecg1_10_spectral_entropy": 0.5974489973078707,
+      "ecg1_10_high_power": 0.025148790464681114,
+      "pulse_valid": 1.0,
+      "pulse_30_spread": 0.6794413057124922,
+      "pulse_30_flat": 0.06307507667689025,
+      "pulse_30_rate": 118.0,
+      "pulse_30_rr_cv": 0.5355464052280221,
+      "pulse_30_max_gap": 1.364,
+      "pulse_30_spectral_entropy": 0.4703900666300399,
+      "pulse_30_high_power": 1.0516094842089866e-05,
+      "pulse_10_spread": 0.7654844109646359,
+      "pulse_10_flat": 0.06762705082032813,
+      "pulse_10_rate": 120.0,
+      "pulse_10_rr_cv": 0.7511946860616426,
+      "pulse_10_max_gap": 1.94,
+      "pulse_10_spectral_entropy": 0.47940298439879575,
+      "pulse_10_high_power": 1.3561277847153689e-05,
+      "rate_disagreement": 3.0
+    },
+    "model_decisions": {
+      "ecg": {
+        "preserve_alarm": false,
+        "abstain": false,
+        "reason": "model_decision",
+        "score": 0.0020617274499428913,
+        "threshold": 0.12,
+        "uncertainty_band": 0.05,
+        "strongest_negative_logit_terms": [
+          {
+            "feature": "ecg1_30_flat",
+            "contribution": -8.881946906055637
+          },
+          {
+            "feature": "ecg0_10_flat",
+            "contribution": -3.3625193686961983
+          },
+          {
+            "feature": "ecg0_30_flat",
+            "contribution": -3.0878995374056237
+          },
+          {
+            "feature": "alarm_Asystole",
+            "contribution": -1.5922743696889967
+          },
+          {
+            "feature": "ecg1_30_high_power",
+            "contribution": -1.528928980120981
+          }
+        ],
+        "interpretation": "Associations of this fitted model; not causal or clinical explanations"
+      },
+      "multimodal": {
+        "preserve_alarm": true,
+        "abstain": false,
+        "reason": "model_decision",
+        "score": 0.46922412442899025,
+        "threshold": 0.29,
+        "uncertainty_band": 0.05,
+        "strongest_negative_logit_terms": [
+          {
+            "feature": "alarm_Asystole",
+            "contribution": -1.166373674040134
+          },
+          {
+            "feature": "ecg1_30_flat",
+            "contribution": -1.037433813226433
+          },
+          {
+            "feature": "ecg0_30_flat",
+            "contribution": -0.9615557187518303
+          },
+          {
+            "feature": "alarm_Tachycardia",
+            "contribution": -0.48082331132384115
+          },
+          {
+            "feature": "ecg1_10_flat",
+            "contribution": -0.34903507094322
+          }
+        ],
+        "interpretation": "Associations of this fitted model; not causal or clinical explanations"
+      }
+    },
+    "pulse_rule": {
+      "preserve_alarm": true,
+      "abstain": false,
+      "reason": "fixed_pulse_rate_rule"
+    }
+  },
+  {
+    "record": "b832s",
+    "alarm": "Bradycardia",
+    "truth": 1,
+    "missed_by": [
+      "pulse_rule"
+    ],
+    "channels": [
+      {
+        "channel": "II",
+        "kind": "ecg",
+        "unit": "mV",
+        "nonfinite_count": 0,
+        "minimum": -0.5535403726708075,
+        "maximum": 1.5234782608695652,
+        "spread": 0.9615403726708067,
+        "flat_fraction": 0.008001066808907855,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "V",
+        "kind": "ecg",
+        "unit": "mV",
+        "nonfinite_count": 0,
+        "minimum": -0.52683071449748,
+        "maximum": 1.5443225615179366,
+        "spread": 1.1046990809368507,
+        "flat_fraction": 0.0050673423123083075,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "PLETH",
+        "kind": "pulse",
+        "unit": "NU",
+        "nonfinite_count": 0,
+        "minimum": 0.0895224518888097,
+        "maximum": 0.7527441197434069,
+        "spread": 0.356735566642908,
+        "flat_fraction": 0.004533937858381117,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "RESP",
+        "kind": "unused",
+        "unit": "NU",
+        "nonfinite_count": 0,
+        "minimum": -0.007073170731707317,
+        "maximum": 1.0048780487804878,
+        "spread": 1.0,
+        "flat_fraction": 0.09161221496199494,
+        "gate_reasons": [],
+        "usable": false
+      }
+    ],
+    "features": {
+      "alarm_Asystole": 0.0,
+      "alarm_Bradycardia": 1.0,
+      "alarm_Tachycardia": 0.0,
+      "alarm_Ventricular_Tachycardia": 0.0,
+      "alarm_Ventricular_Flutter_Fib": 0.0,
+      "ecg0_valid": 1.0,
+      "ecg0_30_spread": 0.9615403726708067,
+      "ecg0_30_flat": 0.008001066808907855,
+      "ecg0_30_rate": 112.0,
+      "ecg0_30_rr_cv": 0.5100702159474371,
+      "ecg0_30_max_gap": 1.212,
+      "ecg0_30_spectral_entropy": 0.6423162601048282,
+      "ecg0_30_high_power": 0.09755979315384894,
+      "ecg0_10_spread": 0.8743229813664594,
+      "ecg0_10_flat": 0.006402561024409764,
+      "ecg0_10_rate": 126.0,
+      "ecg0_10_rr_cv": 0.37661908064891536,
+      "ecg0_10_max_gap": 0.924,
+      "ecg0_10_spectral_entropy": 0.6244130809991005,
+      "ecg0_10_high_power": 0.08956452562790566,
+      "ecg1_valid": 1.0,
+      "ecg1_30_spread": 1.1046990809368507,
+      "ecg1_30_flat": 0.0050673423123083075,
+      "ecg1_30_rate": 150.0,
+      "ecg1_30_rr_cv": 0.3029756755344099,
+      "ecg1_30_max_gap": 0.78,
+      "ecg1_30_spectral_entropy": 0.6096885141639953,
+      "ecg1_30_high_power": 0.0627431338479539,
+      "ecg1_10_spread": 0.835487696412689,
+      "ecg1_10_flat": 0.0056022408963585435,
+      "ecg1_10_rate": 144.0,
+      "ecg1_10_rr_cv": 0.24154005025281738,
+      "ecg1_10_max_gap": 0.62,
+      "ecg1_10_spectral_entropy": 0.6190118569339674,
+      "ecg1_10_high_power": 0.10199097832378759,
+      "pulse_valid": 1.0,
+      "pulse_30_spread": 0.356735566642908,
+      "pulse_30_flat": 0.004533937858381117,
+      "pulse_30_rate": 120.0,
+      "pulse_30_rr_cv": 0.1847321048178036,
+      "pulse_30_max_gap": 1.06,
+      "pulse_30_spectral_entropy": 0.22830227639742892,
+      "pulse_30_high_power": 3.659484498602769e-07,
+      "pulse_10_spread": 0.38468282252316466,
+      "pulse_10_flat": 0.003201280512204882,
+      "pulse_10_rate": 120.0,
+      "pulse_10_rr_cv": 0.047040115317013916,
+      "pulse_10_max_gap": 0.52,
+      "pulse_10_spectral_entropy": 0.23425061075167858,
+      "pulse_10_high_power": 6.430726875925571e-07,
+      "rate_disagreement": 15.0
+    },
+    "model_decisions": {
+      "ecg": {
+        "preserve_alarm": true,
+        "abstain": false,
+        "reason": "model_decision",
+        "score": 0.6100608538241048,
+        "threshold": 0.12,
+        "uncertainty_band": 0.05,
+        "strongest_negative_logit_terms": [
+          {
+            "feature": "ecg1_30_high_power",
+            "contribution": -1.167118763256353
+          },
+          {
+            "feature": "alarm_Tachycardia",
+            "contribution": -0.6984714785432415
+          },
+          {
+            "feature": "ecg1_30_max_gap",
+            "contribution": -0.5130055422495274
+          },
+          {
+            "feature": "ecg1_10_flat",
+            "contribution": -0.38179528998267126
+          },
+          {
+            "feature": "ecg0_30_rr_cv",
+            "contribution": -0.30004718521553225
+          }
+        ],
+        "interpretation": "Associations of this fitted model; not causal or clinical explanations"
+      },
+      "multimodal": {
+        "preserve_alarm": true,
+        "abstain": false,
+        "reason": "model_decision",
+        "score": 0.5529951047855904,
+        "threshold": 0.29,
+        "uncertainty_band": 0.05,
+        "strongest_negative_logit_terms": [
+          {
+            "feature": "alarm_Tachycardia",
+            "contribution": -0.48082331132384115
+          },
+          {
+            "feature": "pulse_10_rr_cv",
+            "contribution": -0.43752295573297034
+          },
+          {
+            "feature": "pulse_10_spectral_entropy",
+            "contribution": -0.3774251980211959
+          },
+          {
+            "feature": "pulse_10_max_gap",
+            "contribution": -0.29799854667544573
+          },
+          {
+            "feature": "ecg1_30_high_power",
+            "contribution": -0.2547468514090335
+          }
+        ],
+        "interpretation": "Associations of this fitted model; not causal or clinical explanations"
+      }
+    },
+    "pulse_rule": {
+      "preserve_alarm": false,
+      "abstain": false,
+      "reason": "fixed_pulse_rate_rule"
+    }
+  },
+  {
+    "record": "v448s",
+    "alarm": "Ventricular_Tachycardia",
+    "truth": 1,
+    "missed_by": [
+      "ecg"
+    ],
+    "channels": [
+      {
+        "channel": "II",
+        "kind": "ecg",
+        "unit": "mV",
+        "nonfinite_count": 0,
+        "minimum": -0.7649322493224933,
+        "maximum": 0.5430352303523035,
+        "spread": 0.2545230352303519,
+        "flat_fraction": 0.04227230297372983,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "V",
+        "kind": "ecg",
+        "unit": "mV",
+        "nonfinite_count": 0,
+        "minimum": -0.6570891233935848,
+        "maximum": 0.7018075436213562,
+        "spread": 0.4767631386479991,
+        "flat_fraction": 0.06814241898919857,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "PLETH",
+        "kind": "pulse",
+        "unit": "NU",
+        "nonfinite_count": 0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "spread": 0.0,
+        "flat_fraction": 1.0,
+        "gate_reasons": [
+          "near_flat_spread",
+          "flat_sample_gate"
+        ],
+        "usable": false
+      }
+    ],
+    "features": {
+      "alarm_Asystole": 0.0,
+      "alarm_Bradycardia": 0.0,
+      "alarm_Tachycardia": 0.0,
+      "alarm_Ventricular_Tachycardia": 1.0,
+      "alarm_Ventricular_Flutter_Fib": 0.0,
+      "ecg0_valid": 1.0,
+      "ecg0_30_spread": 0.2545230352303519,
+      "ecg0_30_flat": 0.04227230297372983,
+      "ecg0_30_rate": 138.0,
+      "ecg0_30_rr_cv": 0.472563353059332,
+      "ecg0_30_max_gap": 1.276,
+      "ecg0_30_spectral_entropy": 0.5444366200575849,
+      "ecg0_30_high_power": 0.015333382747634778,
+      "ecg0_10_spread": 0.5158157181571815,
+      "ecg0_10_flat": 0.01920768307322929,
+      "ecg0_10_rate": 114.0,
+      "ecg0_10_rr_cv": 0.4140632126179525,
+      "ecg0_10_max_gap": 2.704,
+      "ecg0_10_spectral_entropy": 0.5417522454463398,
+      "ecg0_10_high_power": 0.011295268647658192,
+      "ecg1_valid": 1.0,
+      "ecg1_30_spread": 0.4767631386479991,
+      "ecg1_30_flat": 0.06814241898919857,
+      "ecg1_30_rate": 134.0,
+      "ecg1_30_rr_cv": 0.44024203946963386,
+      "ecg1_30_max_gap": 1.156,
+      "ecg1_30_spectral_entropy": 0.5131211863686482,
+      "ecg1_30_high_power": 0.01089674779359765,
+      "ecg1_10_spread": 0.8009821335283669,
+      "ecg1_10_flat": 0.02921168467386955,
+      "ecg1_10_rate": 102.0,
+      "ecg1_10_rr_cv": 0.5801609897768822,
+      "ecg1_10_max_gap": 2.74,
+      "ecg1_10_spectral_entropy": 0.5146729033882018,
+      "ecg1_10_high_power": 0.010051894779017422,
+      "pulse_valid": 0.0,
+      "pulse_30_spread": null,
+      "pulse_30_flat": null,
+      "pulse_30_rate": null,
+      "pulse_30_rr_cv": null,
+      "pulse_30_max_gap": null,
+      "pulse_30_spectral_entropy": null,
+      "pulse_30_high_power": null,
+      "pulse_10_spread": null,
+      "pulse_10_flat": null,
+      "pulse_10_rate": null,
+      "pulse_10_rr_cv": null,
+      "pulse_10_max_gap": null,
+      "pulse_10_spectral_entropy": null,
+      "pulse_10_high_power": null,
+      "rate_disagreement": null
+    },
+    "model_decisions": {
+      "ecg": {
+        "preserve_alarm": false,
+        "abstain": false,
+        "reason": "model_decision",
+        "score": 0.03292603444328309,
+        "threshold": 0.12,
+        "uncertainty_band": 0.05,
+        "strongest_negative_logit_terms": [
+          {
+            "feature": "ecg1_30_flat",
+            "contribution": -2.262955243071912
+          },
+          {
+            "feature": "ecg0_10_max_gap",
+            "contribution": -1.8928179591800345
+          },
+          {
+            "feature": "ecg1_30_high_power",
+            "contribution": -1.718591438829556
+          },
+          {
+            "feature": "ecg0_10_spectral_entropy",
+            "contribution": -0.7529592075775664
+          },
+          {
+            "feature": "alarm_Tachycardia",
+            "contribution": -0.6984714785432415
+          }
+        ],
+        "interpretation": "Associations of this fitted model; not causal or clinical explanations"
+      },
+      "multimodal": {
+        "preserve_alarm": true,
+        "abstain": true,
+        "reason": "missing_or_invalid_pulse",
+        "score": 0.43190444475332374,
+        "threshold": 0.29,
+        "uncertainty_band": 0.05,
+        "strongest_negative_logit_terms": [
+          {
+            "feature": "alarm_Tachycardia",
+            "contribution": -0.48082331132384115
+          },
+          {
+            "feature": "pulse_valid",
+            "contribution": -0.4603989159187561
+          },
+          {
+            "feature": "ecg1_30_high_power",
+            "contribution": -0.3751167162104716
+          },
+          {
+            "feature": "ecg0_30_spectral_entropy",
+            "contribution": -0.3141859180285692
+          },
+          {
+            "feature": "ecg0_10_spectral_entropy",
+            "contribution": -0.27340636207714814
+          }
+        ],
+        "interpretation": "Associations of this fitted model; not causal or clinical explanations"
+      }
+    },
+    "pulse_rule": {
+      "preserve_alarm": true,
+      "abstain": true,
+      "reason": "missing_or_invalid_pulse"
+    }
+  },
+  {
+    "record": "v534s",
+    "alarm": "Ventricular_Tachycardia",
+    "truth": 1,
+    "missed_by": [
+      "ecg",
+      "multimodal"
+    ],
+    "channels": [
+      {
+        "channel": "II",
+        "kind": "ecg",
+        "unit": "mV",
+        "nonfinite_count": 0,
+        "minimum": -2.133025166923472,
+        "maximum": 2.426810477657935,
+        "spread": 1.5907550077041595,
+        "flat_fraction": 0.004133884517935725,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "V",
+        "kind": "ecg",
+        "unit": "mV",
+        "nonfinite_count": 0,
+        "minimum": -4.048377581120944,
+        "maximum": 1.8489675516224189,
+        "spread": 2.2585545722713847,
+        "flat_fraction": 0.007601013468462462,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "PLETH",
+        "kind": "pulse",
+        "unit": "NU",
+        "nonfinite_count": 0,
+        "minimum": 0.7651612903225806,
+        "maximum": 4.565161290322581,
+        "spread": 2.2704516129032237,
+        "flat_fraction": 0.00440058674489932,
+        "gate_reasons": [],
+        "usable": true
+      },
+      {
+        "channel": "RESP",
+        "kind": "unused",
+        "unit": "NU",
+        "nonfinite_count": 0,
+        "minimum": -0.1234887737478411,
+        "maximum": 0.10582901554404145,
+        "spread": 0.09926597582037996,
+        "flat_fraction": 0.06960928123749834,
+        "gate_reasons": [],
+        "usable": false
+      }
+    ],
+    "features": {
+      "alarm_Asystole": 0.0,
+      "alarm_Bradycardia": 0.0,
+      "alarm_Tachycardia": 0.0,
+      "alarm_Ventricular_Tachycardia": 1.0,
+      "alarm_Ventricular_Flutter_Fib": 0.0,
+      "ecg0_valid": 1.0,
+      "ecg0_30_spread": 1.5907550077041595,
+      "ecg0_30_flat": 0.004133884517935725,
+      "ecg0_30_rate": 128.0,
+      "ecg0_30_rr_cv": 0.1501210038105416,
+      "ecg0_30_max_gap": 0.56,
+      "ecg0_30_spectral_entropy": 0.6276741545406235,
+      "ecg0_30_high_power": 0.17228353096546942,
+      "ecg0_10_spread": 1.445891114535182,
+      "ecg0_10_flat": 0.004001600640256103,
+      "ecg0_10_rate": 120.0,
+      "ecg0_10_rr_cv": 0.02267485977605913,
+      "ecg0_10_max_gap": 0.536,
+      "ecg0_10_spectral_entropy": 0.5702900254801322,
+      "ecg0_10_high_power": 0.191820797408733,
+      "ecg1_valid": 1.0,
+      "ecg1_30_spread": 2.2585545722713847,
+      "ecg1_30_flat": 0.007601013468462462,
+      "ecg1_30_rate": 126.0,
+      "ecg1_30_rr_cv": 0.12823172185276363,
+      "ecg1_30_max_gap": 0.576,
+      "ecg1_30_spectral_entropy": 0.6581564316623844,
+      "ecg1_30_high_power": 0.15003537904112815,
+      "ecg1_10_spread": 1.9953392330383481,
+      "ecg1_10_flat": 0.005202080832332933,
+      "ecg1_10_rate": 120.0,
+      "ecg1_10_rr_cv": 0.02267485977605913,
+      "ecg1_10_max_gap": 0.536,
+      "ecg1_10_spectral_entropy": 0.5939868113693624,
+      "ecg1_10_high_power": 0.19973625095647848,
+      "pulse_valid": 1.0,
+      "pulse_30_spread": 2.2704516129032237,
+      "pulse_30_flat": 0.00440058674489932,
+      "pulse_30_rate": 124.0,
+      "pulse_30_rr_cv": 0.25331478452939465,
+      "pulse_30_max_gap": 1.088,
+      "pulse_30_spectral_entropy": 0.41684616217083276,
+      "pulse_30_high_power": 1.8818753312706697e-06,
+      "pulse_10_spread": 2.2699354838709676,
+      "pulse_10_flat": 0.004801920768307323,
+      "pulse_10_rate": 126.0,
+      "pulse_10_rr_cv": 0.15501324392489102,
+      "pulse_10_max_gap": 0.528,
+      "pulse_10_spectral_entropy": 0.3455252945875297,
+      "pulse_10_high_power": 2.1540779195623027e-06,
+      "rate_disagreement": 6.0
+    },
+    "model_decisions": {
+      "ecg": {
+        "preserve_alarm": false,
+        "abstain": false,
+        "reason": "model_decision",
+        "score": 0.035445013193800994,
+        "threshold": 0.12,
+        "uncertainty_band": 0.05,
+        "strongest_negative_logit_terms": [
+          {
+            "feature": "ecg0_10_rr_cv",
+            "contribution": -1.4478735690562117
+          },
+          {
+            "feature": "ecg1_30_max_gap",
+            "contribution": -0.771594408429186
+          },
+          {
+            "feature": "alarm_Tachycardia",
+            "contribution": -0.6984714785432415
+          },
+          {
+            "feature": "ecg1_30_spread",
+            "contribution": -0.5716370792261495
+          },
+          {
+            "feature": "ecg0_10_spectral_entropy",
+            "contribution": -0.4371288240925098
+          }
+        ],
+        "interpretation": "Associations of this fitted model; not causal or clinical explanations"
+      },
+      "multimodal": {
+        "preserve_alarm": false,
+        "abstain": false,
+        "reason": "model_decision",
+        "score": 0.14006803603425724,
+        "threshold": 0.29,
+        "uncertainty_band": 0.05,
+        "strongest_negative_logit_terms": [
+          {
+            "feature": "alarm_Tachycardia",
+            "contribution": -0.48082331132384115
+          },
+          {
+            "feature": "ecg0_10_rr_cv",
+            "contribution": -0.4755367565646801
+          },
+          {
+            "feature": "pulse_10_max_gap",
+            "contribution": -0.2956142858150867
+          },
+          {
+            "feature": "alarm_Ventricular_Tachycardia",
+            "contribution": -0.25751332833552837
+          },
+          {
+            "feature": "pulse_10_rr_cv",
+            "contribution": -0.2252676601886411
+          }
+        ],
+        "interpretation": "Associations of this fitted model; not causal or clinical explanations"
+      }
+    },
+    "pulse_rule": {
+      "preserve_alarm": true,
+      "abstain": false,
+      "reason": "fixed_pulse_rate_rule"
+    }
+  }
+]

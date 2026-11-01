@@ -1,0 +1,119 @@
+{
+  "ecg": {
+    "total": 225,
+    "abstained": 33,
+    "coverage": 0.8533333333333334,
+    "reason_counts": {
+      "score_near_threshold_uncalibrated": 25,
+      "ecg_quality_rejection": 8
+    },
+    "reason_combinations": {
+      "score_near_threshold_uncalibrated": 25,
+      "ecg_quality_rejection": 8
+    },
+    "conditional_accepted": {
+      "n": 192,
+      "true": 87,
+      "false": 105,
+      "tp": 84,
+      "fn": 3,
+      "tn": 26,
+      "fp": 79,
+      "sensitivity": 0.9655172413793104,
+      "specificity": 0.24761904761904763,
+      "false_alarm_suppression_rate": 0.24761904761904763,
+      "precision": 0.5153374233128835,
+      "f1": 0.672,
+      "balanced_accuracy": 0.6065681444991791,
+      "challenge_score": 53.92156862745098,
+      "true_alarms_suppressed": 3,
+      "true_alarms_suppressed_percent": 3.4482758620689653,
+      "abstention_rate": 0.0
+    },
+    "overall_with_fallback": {
+      "n": 225,
+      "true": 88,
+      "false": 137,
+      "tp": 85,
+      "fn": 3,
+      "tn": 26,
+      "fp": 111,
+      "sensitivity": 0.9659090909090909,
+      "specificity": 0.1897810218978102,
+      "false_alarm_suppression_rate": 0.1897810218978102,
+      "precision": 0.4336734693877551,
+      "f1": 0.5985915492957746,
+      "balanced_accuracy": 0.5778450564034505,
+      "challenge_score": 46.835443037974684,
+      "true_alarms_suppressed": 3,
+      "true_alarms_suppressed_percent": 3.409090909090909,
+      "abstention_rate": 0.14666666666666667
+    },
+    "accepted_error_rate": 0.4270833333333333,
+    "abstained_true": 1,
+    "abstained_false": 32,
+    "missing_feature_rows": 14,
+    "invalid_feature_handling": "Partial NaNs are imputed; only validity flags, rate conflict or score conditions cause abstention"
+  },
+  "multimodal": {
+    "total": 225,
+    "abstained": 160,
+    "coverage": 0.28888888888888886,
+    "reason_counts": {
+      "score_near_threshold_uncalibrated": 30,
+      "candidate_rate_disagreement": 138,
+      "ecg_quality_rejection": 8,
+      "pulse_quality_rejection": 3
+    },
+    "reason_combinations": {
+      "score_near_threshold_uncalibrated": 11,
+      "candidate_rate_disagreement": 119,
+      "ecg_quality_rejection": 8,
+      "pulse_quality_rejection": 3,
+      "candidate_rate_disagreement;score_near_threshold_uncalibrated": 19
+    },
+    "conditional_accepted": {
+      "n": 65,
+      "true": 32,
+      "false": 33,
+      "tp": 30,
+      "fn": 2,
+      "tn": 21,
+      "fp": 12,
+      "sensitivity": 0.9375,
+      "specificity": 0.6363636363636364,
+      "false_alarm_suppression_rate": 0.6363636363636364,
+      "precision": 0.7142857142857143,
+      "f1": 0.8108108108108109,
+      "balanced_accuracy": 0.7869318181818181,
+      "challenge_score": 69.86301369863014,
+      "true_alarms_suppressed": 2,
+      "true_alarms_suppressed_percent": 6.25,
+      "abstention_rate": 0.0
+    },
+    "overall_with_fallback": {
+      "n": 225,
+      "true": 88,
+      "false": 137,
+      "tp": 86,
+      "fn": 2,
+      "tn": 21,
+      "fp": 116,
+      "sensitivity": 0.9772727272727273,
+      "specificity": 0.15328467153284672,
+      "false_alarm_suppression_rate": 0.15328467153284672,
+      "precision": 0.42574257425742573,
+      "f1": 0.593103448275862,
+      "balanced_accuracy": 0.565278699402787,
+      "challenge_score": 45.92274678111588,
+      "true_alarms_suppressed": 2,
+      "true_alarms_suppressed_percent": 2.272727272727273,
+      "abstention_rate": 0.7111111111111111
+    },
+    "accepted_error_rate": 0.2153846153846154,
+    "abstained_true": 56,
+    "abstained_false": 104,
+    "missing_feature_rows": 19,
+    "invalid_feature_handling": "Partial NaNs are imputed; only validity flags, rate conflict or score conditions cause abstention"
+  }
+}

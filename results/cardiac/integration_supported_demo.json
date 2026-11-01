@@ -1,0 +1,123 @@
+{
+  "scope": "Real stored ICU signal; synthetic driver capacity and software-only vehicle interface. No diagnosis, maneuver or external delivery.",
+  "alarm_verification": {
+    "preserve_alarm": true,
+    "abstain": false,
+    "reason": "model_decision",
+    "score": 0.9837701261682545,
+    "timing_ms": {
+      "load_ms": 13.319100020453334,
+      "preprocess_ms": 8.115099975839257,
+      "feature_ms": 6.790400017052889,
+      "model_ms": 0.04299997817724943
+    },
+    "total_ms": 28.544100001454353
+  },
+  "alarm_warning_retained": true,
+  "traces": [
+    {
+      "case": "responsive",
+      "first_stage": "MEDICAL_WARNING",
+      "second_stage": "MEDICAL_WARNING",
+      "request": 0,
+      "medical": "cardiac_rhythm",
+      "contacts_eligible": 0,
+      "ems_eligible": 0,
+      "gateway_result": "no_request",
+      "oem_reply": "not_applicable",
+      "biometric_payload_in_receipt": 0,
+      "real_vehicle_maneuver": 0,
+      "real_notification_delivered": 0
+    },
+    {
+      "case": "confirmed_independent",
+      "first_stage": "VERIFYING",
+      "second_stage": "WAITING_OEM_ACK",
+      "request": 1,
+      "medical": "cardiac_rhythm",
+      "contacts_eligible": 1,
+      "ems_eligible": 1,
+      "gateway_result": "authenticated_candidate_for_independent_safety_evaluation",
+      "oem_reply": "OEM_ACCEPTED_REQUEST",
+      "biometric_payload_in_receipt": 0,
+      "real_vehicle_maneuver": 0,
+      "real_notification_delivered": 0
+    },
+    {
+      "case": "camera_failure",
+      "first_stage": "MEDICAL_WARNING",
+      "second_stage": "MEDICAL_WARNING",
+      "request": 0,
+      "medical": "cardiac_rhythm",
+      "contacts_eligible": 0,
+      "ems_eligible": 0,
+      "gateway_result": "no_request",
+      "oem_reply": "not_applicable",
+      "biometric_payload_in_receipt": 0,
+      "real_vehicle_maneuver": 0,
+      "real_notification_delivered": 0
+    },
+    {
+      "case": "network_failure",
+      "first_stage": "VERIFYING",
+      "second_stage": "WAITING_OEM_ACK",
+      "request": 1,
+      "medical": "cardiac_rhythm",
+      "contacts_eligible": 0,
+      "ems_eligible": 0,
+      "gateway_result": "authenticated_candidate_for_independent_safety_evaluation",
+      "oem_reply": "OEM_ACCEPTED_REQUEST",
+      "biometric_payload_in_receipt": 0,
+      "real_vehicle_maneuver": 0,
+      "real_notification_delivered": 0
+    },
+    {
+      "case": "oem_decline",
+      "first_stage": "VERIFYING",
+      "second_stage": "WAITING_OEM_ACK",
+      "request": 1,
+      "medical": "cardiac_rhythm",
+      "contacts_eligible": 1,
+      "ems_eligible": 1,
+      "gateway_result": "authenticated_candidate_for_independent_safety_evaluation",
+      "oem_reply": "OEM_DECLINED_REQUEST",
+      "biometric_payload_in_receipt": 0,
+      "real_vehicle_maneuver": 0,
+      "real_notification_delivered": 0
+    },
+    {
+      "case": "no_oem_ack",
+      "first_stage": "VERIFYING",
+      "second_stage": "WAITING_OEM_ACK",
+      "request": 1,
+      "medical": "cardiac_rhythm",
+      "contacts_eligible": 1,
+      "ems_eligible": 1,
+      "gateway_result": "authenticated_candidate_for_independent_safety_evaluation",
+      "oem_reply": "ACK_TIMEOUT",
+      "biometric_payload_in_receipt": 0,
+      "real_vehicle_maneuver": 0,
+      "real_notification_delivered": 0
+    }
+  ],
+  "local_emergency_message": {
+    "payload": {
+      "suspected_category": "cardiac_alarm",
+      "responsiveness": "synthetic_unresponsive",
+      "vehicle_state": "simulation",
+      "time_ms": 10500
+    },
+    "verified": [
+      true,
+      "accepted_for_policy_evaluation"
+    ],
+    "replay_rejected": true,
+    "transmitted": false,
+    "contains_waveforms": false,
+    "confidentiality": "not implemented; authenticated local envelope only"
+  },
+  "real_vehicle_response": false,
+  "real_emergency_delivery": false,
+  "selection": "Lexicographically first held-out record with this predicted output; truth not used; functionality demonstration only",
+  "record": "a142s"
+}

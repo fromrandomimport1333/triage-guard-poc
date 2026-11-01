@@ -1,0 +1,15 @@
+method,group,value,n,abstained,abstention_rate
+ecg,alarm,Asystole,36,13,0.3611111111111111
+ecg,alarm,Bradycardia,27,2,0.07407407407407407
+ecg,alarm,Tachycardia,42,0,0.0
+ecg,alarm,Ventricular_Flutter_Fib,18,3,0.16666666666666666
+ecg,alarm,Ventricular_Tachycardia,102,15,0.14705882352941177
+ecg,true_alarm,0,137,32,0.23357664233576642
+ecg,true_alarm,1,88,1,0.011363636363636364
+multimodal,alarm,Asystole,36,27,0.75
+multimodal,alarm,Bradycardia,27,19,0.7037037037037037
+multimodal,alarm,Tachycardia,42,25,0.5952380952380952
+multimodal,alarm,Ventricular_Flutter_Fib,18,16,0.8888888888888888
+multimodal,alarm,Ventricular_Tachycardia,102,73,0.7156862745098039
+multimodal,true_alarm,0,137,104,0.7591240875912408
+multimodal,true_alarm,1,88,56,0.6363636363636364

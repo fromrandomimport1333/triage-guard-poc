@@ -1,0 +1,7 @@
+method,reason,count,percentage_all,overlap_allowed
+ecg,score_near_threshold_uncalibrated,25,11.11111111111111,True
+ecg,ecg_quality_rejection,8,3.5555555555555554,True
+multimodal,score_near_threshold_uncalibrated,30,13.333333333333334,True
+multimodal,candidate_rate_disagreement,138,61.333333333333336,True
+multimodal,ecg_quality_rejection,8,3.5555555555555554,True
+multimodal,pulse_quality_rejection,3,1.3333333333333333,True

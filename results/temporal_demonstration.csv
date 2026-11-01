@@ -1,0 +1,8 @@
+case,first_stage,second_stage,request,medical,contacts_eligible,ems_eligible,gateway_result,oem_reply,biometric_payload_in_receipt,real_vehicle_maneuver,real_notification_delivered
+confirmed_independent,VERIFYING,WAITING_OEM_ACK,1,unknown,1,1,authenticated_candidate_for_independent_safety_evaluation,OEM_ACCEPTED_REQUEST,0,0,0
+medical_unknown,VERIFYING,WAITING_OEM_ACK,1,unknown,1,1,authenticated_candidate_for_independent_safety_evaluation,OEM_ACCEPTED_REQUEST,0,0,0
+camera_failure,DEGRADED_MONITOR,DEGRADED_MONITOR,0,unknown,0,0,no_request,not_applicable,0,0,0
+responsive,MONITOR,MONITOR,0,normal,0,0,no_request,not_applicable,0,0,0
+network_failure,VERIFYING,WAITING_OEM_ACK,1,unknown,0,0,authenticated_candidate_for_independent_safety_evaluation,OEM_ACCEPTED_REQUEST,0,0,0
+oem_decline,VERIFYING,WAITING_OEM_ACK,1,unknown,1,1,authenticated_candidate_for_independent_safety_evaluation,OEM_DECLINED_REQUEST,0,0,0
+no_oem_ack,VERIFYING,WAITING_OEM_ACK,1,unknown,1,1,authenticated_candidate_for_independent_safety_evaluation,ACK_TIMEOUT,0,0,0

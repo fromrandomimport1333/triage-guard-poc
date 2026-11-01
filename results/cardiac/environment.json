@@ -1,0 +1,14 @@
+{
+  "python": "3.13.2",
+  "os": "Windows-11-10.0.26300-SP0",
+  "processor": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+  "logical_cpus": 16,
+  "packages": {
+    "numpy": "2.2.5",
+    "scipy": "1.15.2",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "wfdb": "4.3.1",
+    "matplotlib": "3.10.1"
+  }
+}

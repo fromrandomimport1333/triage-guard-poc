@@ -1,0 +1,14 @@
+{
+  "seed": 20261030,
+  "test_size": 0.3,
+  "cv_folds": 3,
+  "C_grid": [
+    0.1,
+    1,
+    10
+  ],
+  "uncertainty_band": 0.05,
+  "threshold_grid": "0:0.01:1",
+  "sensitivity_target": 0.98,
+  "bootstrap": 1000
+}

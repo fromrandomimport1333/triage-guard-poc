@@ -1,0 +1,19 @@
+method,uncertainty_band,coverage,accepted_n,conditional_error,overall_sensitivity,false_alarm_suppression,scope
+ecg,0.0,0.9644444444444444,217,0.4147465437788018,0.9659090909090909,0.30656934306569344,already-inspected test data; descriptive only; original band stays 0.05
+ecg,0.025,0.9022222222222223,203,0.4187192118226601,0.9659090909090909,0.24817518248175183,already-inspected test data; descriptive only; original band stays 0.05
+ecg,0.05,0.8533333333333334,192,0.4270833333333333,0.9659090909090909,0.1897810218978102,already-inspected test data; descriptive only; original band stays 0.05
+ecg,0.075,0.7733333333333333,174,0.42528735632183906,0.9659090909090909,0.1386861313868613,already-inspected test data; descriptive only; original band stays 0.05
+ecg,0.1,0.72,162,0.42592592592592593,0.9886363636363636,0.08759124087591241,already-inspected test data; descriptive only; original band stays 0.05
+ecg,0.15,0.6088888888888889,137,0.41605839416058393,1.0,0.0,already-inspected test data; descriptive only; original band stays 0.05
+ecg,0.2,0.56,126,0.3888888888888889,1.0,0.0,already-inspected test data; descriptive only; original band stays 0.05
+ecg,0.3,0.5066666666666667,114,0.35964912280701755,1.0,0.0,already-inspected test data; descriptive only; original band stays 0.05
+ecg,0.5,0.3288888888888889,74,0.20270270270270271,1.0,0.0,already-inspected test data; descriptive only; original band stays 0.05
+multimodal,0.0,0.3377777777777778,76,0.19736842105263158,0.9772727272727273,0.19708029197080293,already-inspected test data; descriptive only; original band stays 0.05
+multimodal,0.025,0.30666666666666664,69,0.21739130434782608,0.9772727272727273,0.1678832116788321,already-inspected test data; descriptive only; original band stays 0.05
+multimodal,0.05,0.28888888888888886,65,0.2153846153846154,0.9772727272727273,0.15328467153284672,already-inspected test data; descriptive only; original band stays 0.05
+multimodal,0.075,0.28,63,0.2222222222222222,0.9772727272727273,0.145985401459854,already-inspected test data; descriptive only; original band stays 0.05
+multimodal,0.1,0.2577777777777778,58,0.1896551724137931,0.9772727272727273,0.13138686131386862,already-inspected test data; descriptive only; original band stays 0.05
+multimodal,0.15,0.20444444444444446,46,0.17391304347826086,1.0,0.072992700729927,already-inspected test data; descriptive only; original band stays 0.05
+multimodal,0.2,0.16,36,0.19444444444444445,1.0,0.0364963503649635,already-inspected test data; descriptive only; original band stays 0.05
+multimodal,0.3,0.10666666666666667,24,0.08333333333333333,1.0,0.0,already-inspected test data; descriptive only; original band stays 0.05
+multimodal,0.5,0.08888888888888889,20,0.05,1.0,0.0,already-inspected test data; descriptive only; original band stays 0.05

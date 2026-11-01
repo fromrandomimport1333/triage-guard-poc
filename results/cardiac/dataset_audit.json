@@ -1,0 +1,85 @@
+{
+  "dataset": "PhysioNet/CinC Challenge 2015",
+  "version": "1.0.0",
+  "doi": "10.13026/c9fg-a467",
+  "source_url": "https://physionet.org/content/challenge-2015/1.0.0/",
+  "archive_sha256": "1f191ca45f555f05ae23be67c34923e2e1624051669bd24a0e49bdad7e5ef686",
+  "archive_bytes": 338623761,
+  "archive_entries": 1506,
+  "archive_crc_ok": true,
+  "license": "Open Data Commons Attribution License v1.0 (dataset page)",
+  "n_indexed": 750,
+  "n_valid": 750,
+  "exclusions": [],
+  "counts": {
+    "0": 456,
+    "1": 294
+  },
+  "alarm_counts": {
+    "Asystole": {
+      "0": 100,
+      "1": 22
+    },
+    "Bradycardia": {
+      "0": 43,
+      "1": 46
+    },
+    "Tachycardia": {
+      "0": 9,
+      "1": 131
+    },
+    "Ventricular_Flutter_Fib": {
+      "0": 52,
+      "1": 6
+    },
+    "Ventricular_Tachycardia": {
+      "0": 252,
+      "1": 89
+    }
+  },
+  "duration_counts": {
+    "330.0": 375,
+    "300.0": 375
+  },
+  "channels": {
+    "II": 728,
+    "V": 684,
+    "PLETH": 627,
+    "aVF": 3,
+    "ABP": 343,
+    "RESP": 278,
+    "III": 39,
+    "MCL": 28,
+    "I": 13,
+    "aVR": 3,
+    "aVL": 2
+  },
+  "units": {
+    "mV": 1500,
+    "NU": 905,
+    "mmHg": 343
+  },
+  "unique_header_comments": [
+    "Asystole",
+    "Bradycardia",
+    "False alarm",
+    "Tachycardia",
+    "True alarm",
+    "Ventricular_Flutter_Fib",
+    "Ventricular_Tachycardia"
+  ],
+  "patient_ids_available": false,
+  "patient_metadata_assessment": "Archive contains only record indexes, checksums and waveform/header pairs; header comments contain alarm type and adjudication only. No reliable patient grouping.",
+  "expected_distribution_matches": false,
+  "duplicate_check": "Exact digital full and pre-alarm hashes; duplicates excluded before split; near duplicates/patient overlap unresolved",
+  "preprocessing": {
+    "boundary_seconds": 300,
+    "windows_seconds": [
+      30,
+      10
+    ],
+    "filter": "causal third-order Butterworth; ECG 5-25 Hz; pulse 0.5-8 Hz",
+    "normalization": "window median after truncation",
+    "imputation": "training only"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "ALARMS": {
+    "url": "https://physionet.org/files/challenge-2015/1.0.0/training/ALARMS",
+    "sha256": "9a19f94b56e6d55f9bb34f8f9a2d2e3323113eef974be8e7ea9d3c70e01e14aa",
+    "local_exact_match": true
+  },
+  "official_current_counts": {
+    "true": 294,
+    "false": 456,
+    "n": 750
+  },
+  "SHA256SUMS": {
+    "url": "https://physionet.org/files/challenge-2015/1.0.0/training/SHA256SUMS",
+    "sha256": "7432ea83a178a467d087746d6c1be4b9ea94ea374f30de1079d40d9bd5da0599",
+    "local_exact_match": true
+  },
+  "checked_date": "2026-10-30"
+}

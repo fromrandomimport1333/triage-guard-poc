@@ -1,0 +1,1765 @@
+{
+  "feature_enabled": true,
+  "score_configuration": {
+    "mu0": 0.1,
+    "sigma0": 0.1,
+    "k": 1.0,
+    "h": 5.0,
+    "fixed_threshold": 3.0,
+    "gap_timeout_ms": 2000,
+    "source_id": "camera_motion",
+    "score_version": "synthetic_motor_v1",
+    "normalization_id": "illustrative_motor_norm_v1",
+    "score_units": "dimensionless_synthetic_motor_score",
+    "config_version": "shadow_v1",
+    "parameter_provenance": "authored synthetic scaling and thresholds; no camera data fitting"
+  },
+  "traces": [
+    {
+      "case": "responsive",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 10000,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 10000,
+          "available": true
+        },
+        "hmi": {
+          "state": "responded",
+          "source_id": "hmi_button",
+          "at_ms": 10000,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 10000,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 6.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": true,
+        "state": "SUSPECTED_BEHAVIORAL_CHANGE",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "threshold_crossing",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 10000,
+        "medical": "seizure_like",
+        "capacity": "responsive",
+        "local_warning": true,
+        "stage": "MEDICAL_WARNING",
+        "request": false,
+        "event_id": null,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "medical_suspicion_without_capacity_confirmation",
+        "evidence_receipt_hash": "5d6b0be23102d65a2014dbf1c035523f641728b043c408f7c1ca6870d6dac368"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "responsive",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 10500,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 10500,
+          "available": true
+        },
+        "hmi": {
+          "state": "responded",
+          "source_id": "hmi_button",
+          "at_ms": 10500,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 10500,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 12.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": false,
+        "state": "VERIFICATION_PENDING",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "latched_no_repeat",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 10500,
+        "medical": "seizure_like",
+        "capacity": "responsive",
+        "local_warning": true,
+        "stage": "MEDICAL_WARNING",
+        "request": false,
+        "event_id": null,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "medical_suspicion_without_capacity_confirmation",
+        "evidence_receipt_hash": "b1b753c16e478de694a2dc4e787fd1fa23f68fdc4fbac0c12041dc200e4546d4"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "responsive",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 11000,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 11000,
+          "available": true
+        },
+        "hmi": {
+          "state": "responded",
+          "source_id": "hmi_button",
+          "at_ms": 11000,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 11000,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 18.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": false,
+        "state": "VERIFICATION_PENDING",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "latched_no_repeat",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 11000,
+        "medical": "seizure_like",
+        "capacity": "responsive",
+        "local_warning": true,
+        "stage": "MEDICAL_WARNING",
+        "request": false,
+        "event_id": null,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "medical_suspicion_without_capacity_confirmation",
+        "evidence_receipt_hash": "8be9330630a4b1fb2dd13c2ef3b806c0968b3a124bfa349ea431a539faca447c"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "independent_incapacity",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 10000,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 10000,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 10000,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 10000,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 6.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": true,
+        "state": "SUSPECTED_BEHAVIORAL_CHANGE",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "threshold_crossing",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 10000,
+        "medical": "seizure_like",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "stage": "VERIFYING",
+        "request": false,
+        "event_id": null,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "first_of_two_temporary_confirmations",
+        "evidence_receipt_hash": "7afd4fce3916415bf38e83aa7ddf91dcfc5ca5a123926af55962ad1361b17ad8"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "independent_incapacity",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 10500,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 10500,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 10500,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 10500,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 12.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": false,
+        "state": "VERIFICATION_PENDING",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "latched_no_repeat",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 10500,
+        "medical": "seizure_like",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "stage": "WAITING_OEM_ACK",
+        "request": true,
+        "event_id": 1,
+        "contacts_eligible": true,
+        "ems_eligible": true,
+        "reason": "new_evaluation_request_only",
+        "evidence_receipt_hash": "964856ed688ee4d79c24092df3c6ab8da71532e1d3708cfef23e4def4ca7b510"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "independent_incapacity",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 11000,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 11000,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 11000,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 11000,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 18.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": false,
+        "state": "VERIFICATION_PENDING",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "latched_no_repeat",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 11000,
+        "medical": "seizure_like",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "stage": "WAITING_OEM_ACK",
+        "request": false,
+        "event_id": 1,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "request_already_emitted_no_retry",
+        "evidence_receipt_hash": "c5b69416fa1a8853f8bc8a486de8fef4d2ee60ca2a78e2c7a6042eb89d6b86da"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "missing_corroboration",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 10000,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 10000,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 10000,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": false
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 10000,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 6.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": true,
+        "state": "SUSPECTED_BEHAVIORAL_CHANGE",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "threshold_crossing",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 10000,
+        "medical": "seizure_like",
+        "capacity": "uncertain",
+        "local_warning": true,
+        "stage": "MEDICAL_WARNING",
+        "request": false,
+        "event_id": null,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "medical_suspicion_without_capacity_confirmation",
+        "evidence_receipt_hash": "aa145afadc3c7b4099af7d8d274c43ff185526fe6a9e70ba34740d92987e91a8"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "missing_corroboration",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 10500,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 10500,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 10500,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": false
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 10500,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 12.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": false,
+        "state": "VERIFICATION_PENDING",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "latched_no_repeat",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 10500,
+        "medical": "seizure_like",
+        "capacity": "uncertain",
+        "local_warning": true,
+        "stage": "MEDICAL_WARNING",
+        "request": false,
+        "event_id": null,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "medical_suspicion_without_capacity_confirmation",
+        "evidence_receipt_hash": "716d6d582103e93300ed8207e5ac098b9fb9fdbaa1880935057e26af45f46ba0"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "missing_corroboration",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 11000,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 11000,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 11000,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": false
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 11000,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 18.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": false,
+        "state": "VERIFICATION_PENDING",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "latched_no_repeat",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 11000,
+        "medical": "seizure_like",
+        "capacity": "uncertain",
+        "local_warning": true,
+        "stage": "MEDICAL_WARNING",
+        "request": false,
+        "event_id": null,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "medical_suspicion_without_capacity_confirmation",
+        "evidence_receipt_hash": "ad3f0ce9bb55ef619691126d4b080a433d954770cfd513eec6d9eb8ce9dd5459"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "camera_failure",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 10000,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": false
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 10000,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 10000,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 10000,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": false,
+        "available": false,
+        "quality_reason": "legacy_synthetic_quality_unavailable",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": null,
+        "statistic": 0.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": false,
+        "state": "UNKNOWN",
+        "latched": false,
+        "needs_reset": false,
+        "reason": "quality_unavailable",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "unknown",
+      "existing_observable_scenario": "uncertain_event",
+      "safety": {
+        "time_ms": 10000,
+        "medical": "unknown",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "stage": "VERIFYING",
+        "request": false,
+        "event_id": null,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "first_of_two_temporary_confirmations",
+        "evidence_receipt_hash": "e7929fe4df16c585fc2e839ed53ee326980cdab3296abe43433fe36df91863fc"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "camera_failure",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 10500,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": false
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 10500,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 10500,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 10500,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": false,
+        "available": false,
+        "quality_reason": "legacy_synthetic_quality_unavailable",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": null,
+        "statistic": 0.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": false,
+        "state": "UNKNOWN",
+        "latched": false,
+        "needs_reset": false,
+        "reason": "quality_unavailable",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "unknown",
+      "existing_observable_scenario": "uncertain_event",
+      "safety": {
+        "time_ms": 10500,
+        "medical": "unknown",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "stage": "WAITING_OEM_ACK",
+        "request": true,
+        "event_id": 1,
+        "contacts_eligible": true,
+        "ems_eligible": true,
+        "reason": "new_evaluation_request_only",
+        "evidence_receipt_hash": "2cf21fa2ca4a7b0016a65f3f45d25c47cf3cd4b42898ee6d25aba7c7120008aa"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "camera_failure",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 11000,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": false
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 11000,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 11000,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 11000,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": false,
+        "available": false,
+        "quality_reason": "legacy_synthetic_quality_unavailable",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": null,
+        "statistic": 0.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": false,
+        "state": "UNKNOWN",
+        "latched": false,
+        "needs_reset": false,
+        "reason": "quality_unavailable",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "unknown",
+      "existing_observable_scenario": "uncertain_event",
+      "safety": {
+        "time_ms": 11000,
+        "medical": "unknown",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "stage": "WAITING_OEM_ACK",
+        "request": false,
+        "event_id": 1,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "request_already_emitted_no_retry",
+        "evidence_receipt_hash": "5be0fda4d130d26c707191fd33c0d3eca1528ae2fc668bb3a83fc153e5bb6e32"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "network_failure",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 10000,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 10000,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 10000,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": false
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 10000,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 6.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": true,
+        "state": "SUSPECTED_BEHAVIORAL_CHANGE",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "threshold_crossing",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 10000,
+        "medical": "seizure_like",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "stage": "VERIFYING",
+        "request": false,
+        "event_id": null,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "first_of_two_temporary_confirmations",
+        "evidence_receipt_hash": "7afd4fce3916415bf38e83aa7ddf91dcfc5ca5a123926af55962ad1361b17ad8"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "network_failure",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 10500,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 10500,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 10500,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": false
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 10500,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 12.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": false,
+        "state": "VERIFICATION_PENDING",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "latched_no_repeat",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 10500,
+        "medical": "seizure_like",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "stage": "WAITING_OEM_ACK",
+        "request": true,
+        "event_id": 1,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "new_evaluation_request_only",
+        "evidence_receipt_hash": "964856ed688ee4d79c24092df3c6ab8da71532e1d3708cfef23e4def4ca7b510"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "network_failure",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 11000,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 11000,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 11000,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": true,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": false
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 11000,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 18.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": false,
+        "state": "VERIFICATION_PENDING",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "latched_no_repeat",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 11000,
+        "medical": "seizure_like",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "stage": "WAITING_OEM_ACK",
+        "request": false,
+        "event_id": 1,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "request_already_emitted_no_retry",
+        "evidence_receipt_hash": "c5b69416fa1a8853f8bc8a486de8fef4d2ee60ca2a78e2c7a6042eb89d6b86da"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "outside_odd",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 10000,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 10000,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 10000,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 10000,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": false,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 10000,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 6.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": true,
+        "state": "SUSPECTED_BEHAVIORAL_CHANGE",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "threshold_crossing",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 10000,
+        "medical": "seizure_like",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "stage": "MEDICAL_WARNING",
+        "request": false,
+        "event_id": null,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "medical_suspicion_without_capacity_confirmation",
+        "evidence_receipt_hash": "be2871d8d6356902bdafacff363241687ee5986ade50d7a4a39863321fc05cf3"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "outside_odd",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 10500,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 10500,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 10500,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 10500,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": false,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 10500,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 12.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": false,
+        "state": "VERIFICATION_PENDING",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "latched_no_repeat",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 10500,
+        "medical": "seizure_like",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "stage": "MEDICAL_WARNING",
+        "request": false,
+        "event_id": null,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "medical_suspicion_without_capacity_confirmation",
+        "evidence_receipt_hash": "bfbd9edf6465bd0b480a26bf338bbbcf542f8988d5bddb38802906b613af9569"
+      },
+      "legacy_result_identical": true
+    },
+    {
+      "case": "outside_odd",
+      "input": {
+        "case_id": "synthetic_true_incapacity",
+        "time_ms": 11000,
+        "truth_medical": "unknown",
+        "truth_incapacity": true,
+        "camera_motor_score": {
+          "source_id": "camera_motion",
+          "value": 0.8,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "ecg_rhythm_score": {
+          "source_id": "ecg",
+          "value": 0.1,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "capacity_evidence": {
+          "source_id": "vehicle_controls",
+          "value": 0.95,
+          "quality": 0.92,
+          "at_ms": 11000,
+          "available": true
+        },
+        "hmi": {
+          "state": "no_response",
+          "source_id": "hmi_button",
+          "at_ms": 11000,
+          "valid": true
+        },
+        "corroboration": {
+          "source_id": "camera_pose",
+          "value": 0.95,
+          "quality": 0.9,
+          "at_ms": 11000,
+          "available": true
+        },
+        "oem_capability": true,
+        "oem_within_odd": false,
+        "oem_controller_healthy": true,
+        "trusted_contact_opt_in": true,
+        "ems_interface_authorized": true,
+        "network_available": true
+      },
+      "enabled": true,
+      "monitor": {
+        "method": "cusum",
+        "at_ms": 11000,
+        "session_id": "synthetic_session",
+        "source_id": "camera_motion",
+        "score": 0.8,
+        "input_valid": true,
+        "available": true,
+        "quality_reason": "legacy_synthetic_quality_valid",
+        "score_version": "synthetic_motor_v1",
+        "normalization_id": "illustrative_motor_norm_v1",
+        "score_units": "dimensionless_synthetic_motor_score",
+        "z": 7.0,
+        "statistic": 18.0,
+        "k": 1.0,
+        "threshold": 5.0,
+        "crossing": false,
+        "state": "VERIFICATION_PENDING",
+        "latched": true,
+        "needs_reset": false,
+        "reason": "latched_no_repeat",
+        "config_version": "shadow_v1",
+        "config_sha256": "8223e076e60b92ed26853aa9b52700b727ce7df960842ebb011b34a5d9830729",
+        "input_metadata": {
+          "session_id": "synthetic_session",
+          "source_id": "camera_motion",
+          "score_version": "synthetic_motor_v1",
+          "normalization_id": "illustrative_motor_norm_v1",
+          "score_units": "dimensionless_synthetic_motor_score"
+        }
+      },
+      "behavioral_evidence": "suspected_behavioral_change_etiology_unresolved",
+      "existing_observable_scenario": "seizure_like_motor_activity",
+      "safety": {
+        "time_ms": 11000,
+        "medical": "seizure_like",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "stage": "MEDICAL_WARNING",
+        "request": false,
+        "event_id": null,
+        "contacts_eligible": false,
+        "ems_eligible": false,
+        "reason": "medical_suspicion_without_capacity_confirmation",
+        "evidence_receipt_hash": "67a0deb0f9d0b53de4cdb8f8af74010a4ab810cb55b937fd1d2f092f1875a4f3"
+      },
+      "legacy_result_identical": true
+    }
+  ]
+}

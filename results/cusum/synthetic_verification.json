@@ -1,0 +1,451 @@
+{
+  "evidence": "SIMULATED arithmetic and fault injection only; no empirical benefit claim",
+  "configuration": {
+    "mu0": 0.0,
+    "sigma0": 1.0,
+    "k": 1.0,
+    "h": 5.0,
+    "fixed_threshold": 3.0,
+    "gap_timeout_ms": 2000,
+    "source_id": "synthetic_camera",
+    "score_version": "synthetic_behavior_v1",
+    "normalization_id": "synthetic_identity_v1",
+    "score_units": "arbitrary_score_units",
+    "config_version": "arithmetic_v1",
+    "parameter_provenance": "mu0=0 sigma0=1 identity fixture; k=1 h=5 note p.6; fixed=3 and gap=2000ms authored uncalibrated settings"
+  },
+  "configuration_sha256": "3ab3728ff9c7cf3f4480ba067574e74dfc51a3aed76333ef0f40db014cec23d3",
+  "exact_example_statistics": [
+    0.0,
+    0.5,
+    2.0,
+    3.5,
+    5.0
+  ],
+  "example_crossing_observation": 5,
+  "cases": [
+    {
+      "case": "note_page6",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [
+        2000
+      ],
+      "unavailable_updates": 0,
+      "ending_statistic": 5.0
+    },
+    {
+      "case": "note_page6",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 0,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "isolated_moderate_spike",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 0,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "isolated_moderate_spike",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [
+        500
+      ],
+      "unavailable_updates": 0,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "single_extreme",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [
+        0
+      ],
+      "unavailable_updates": 0,
+      "ending_statistic": 3.0
+    },
+    {
+      "case": "single_extreme",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [
+        0
+      ],
+      "unavailable_updates": 0,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "persistent_moderate",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [
+        2000
+      ],
+      "unavailable_updates": 0,
+      "ending_statistic": 8.0
+    },
+    {
+      "case": "persistent_moderate",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 0,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "rapid_return",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 0,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "rapid_return",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 0,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "repeated_overlapping_proxy",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [
+        1500
+      ],
+      "unavailable_updates": 0,
+      "ending_statistic": 12.0
+    },
+    {
+      "case": "repeated_overlapping_proxy",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 0,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "cadence_fast",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [
+        400
+      ],
+      "unavailable_updates": 0,
+      "ending_statistic": 8.0
+    },
+    {
+      "case": "cadence_fast",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 0,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "irregular_cadence",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [
+        2000
+      ],
+      "unavailable_updates": 0,
+      "ending_statistic": 5.0
+    },
+    {
+      "case": "irregular_cadence",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 0,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "normal_sequence",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 0,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "normal_sequence",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 0,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "noisy_crossing",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [
+        1500
+      ],
+      "unavailable_updates": 0,
+      "ending_statistic": 4.0
+    },
+    {
+      "case": "noisy_crossing",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [
+        500
+      ],
+      "unavailable_updates": 0,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "short_gap",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 1,
+      "ending_statistic": 3.0
+    },
+    {
+      "case": "short_gap",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [
+        0
+      ],
+      "unavailable_updates": 1,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "long_gap",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 2,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "long_gap",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [
+        0
+      ],
+      "unavailable_updates": 2,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "nonfinite",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 2,
+      "ending_statistic": 2.0
+    },
+    {
+      "case": "nonfinite",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 2,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "duplicate_time",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 1,
+      "ending_statistic": 2.0
+    },
+    {
+      "case": "duplicate_time",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 1,
+      "ending_statistic": 0.0
+    },
+    {
+      "case": "out_of_order",
+      "method": "cusum",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 1,
+      "ending_statistic": 2.0
+    },
+    {
+      "case": "out_of_order",
+      "method": "fixed",
+      "synthetic_crossing_timestamps_ms": [],
+      "unavailable_updates": 1,
+      "ending_statistic": 0.0
+    }
+  ],
+  "lifecycle": [
+    {
+      "method": "cusum",
+      "at_ms": 0,
+      "session_id": "synthetic_session",
+      "source_id": "synthetic_camera",
+      "score": 6.0,
+      "input_valid": true,
+      "available": true,
+      "quality_reason": "synthetic_valid",
+      "score_version": "synthetic_behavior_v1",
+      "normalization_id": "synthetic_identity_v1",
+      "score_units": "arbitrary_score_units",
+      "z": 6.0,
+      "statistic": 5.0,
+      "k": 1.0,
+      "threshold": 5.0,
+      "crossing": true,
+      "state": "SUSPECTED_BEHAVIORAL_CHANGE",
+      "latched": true,
+      "needs_reset": false,
+      "reason": "threshold_crossing",
+      "config_version": "arithmetic_v1",
+      "config_sha256": "3ab3728ff9c7cf3f4480ba067574e74dfc51a3aed76333ef0f40db014cec23d3",
+      "input_metadata": {
+        "session_id": "synthetic_session",
+        "source_id": "synthetic_camera",
+        "score_version": "synthetic_behavior_v1",
+        "normalization_id": "synthetic_identity_v1",
+        "score_units": "arbitrary_score_units"
+      }
+    },
+    {
+      "method": "cusum",
+      "at_ms": 500,
+      "session_id": "synthetic_session",
+      "source_id": "synthetic_camera",
+      "score": 6.0,
+      "input_valid": true,
+      "available": true,
+      "quality_reason": "synthetic_valid",
+      "score_version": "synthetic_behavior_v1",
+      "normalization_id": "synthetic_identity_v1",
+      "score_units": "arbitrary_score_units",
+      "z": 6.0,
+      "statistic": 10.0,
+      "k": 1.0,
+      "threshold": 5.0,
+      "crossing": false,
+      "state": "VERIFICATION_PENDING",
+      "latched": true,
+      "needs_reset": false,
+      "reason": "latched_no_repeat",
+      "config_version": "arithmetic_v1",
+      "config_sha256": "3ab3728ff9c7cf3f4480ba067574e74dfc51a3aed76333ef0f40db014cec23d3",
+      "input_metadata": {
+        "session_id": "synthetic_session",
+        "source_id": "synthetic_camera",
+        "score_version": "synthetic_behavior_v1",
+        "normalization_id": "synthetic_identity_v1",
+        "score_units": "arbitrary_score_units"
+      }
+    },
+    {
+      "method": "cusum",
+      "at_ms": 3000,
+      "session_id": "synthetic_session",
+      "source_id": "synthetic_camera",
+      "score": null,
+      "input_valid": null,
+      "available": false,
+      "quality_reason": "recovery_reset_required",
+      "score_version": "synthetic_behavior_v1",
+      "normalization_id": "synthetic_identity_v1",
+      "score_units": "arbitrary_score_units",
+      "z": null,
+      "statistic": 0.0,
+      "k": 1.0,
+      "threshold": 5.0,
+      "crossing": false,
+      "state": "UNKNOWN",
+      "latched": true,
+      "needs_reset": true,
+      "reason": "recovery_reset_required",
+      "config_version": "arithmetic_v1",
+      "config_sha256": "3ab3728ff9c7cf3f4480ba067574e74dfc51a3aed76333ef0f40db014cec23d3",
+      "input_metadata": null
+    },
+    {
+      "method": "cusum",
+      "at_ms": 3000,
+      "session_id": "synthetic_session",
+      "source_id": "synthetic_camera",
+      "score": null,
+      "input_valid": null,
+      "available": false,
+      "quality_reason": "explicit_sensor_recovery_reset",
+      "score_version": "synthetic_behavior_v1",
+      "normalization_id": "synthetic_identity_v1",
+      "score_units": "arbitrary_score_units",
+      "z": null,
+      "statistic": 0.0,
+      "k": 1.0,
+      "threshold": 5.0,
+      "crossing": false,
+      "state": "UNKNOWN",
+      "latched": false,
+      "needs_reset": false,
+      "reason": "explicit_sensor_recovery_reset",
+      "config_version": "arithmetic_v1",
+      "config_sha256": "3ab3728ff9c7cf3f4480ba067574e74dfc51a3aed76333ef0f40db014cec23d3",
+      "input_metadata": null
+    },
+    {
+      "method": "cusum",
+      "at_ms": 3500,
+      "session_id": "synthetic_session",
+      "source_id": "synthetic_camera",
+      "score": 2.0,
+      "input_valid": true,
+      "available": true,
+      "quality_reason": "synthetic_valid",
+      "score_version": "synthetic_behavior_v1",
+      "normalization_id": "synthetic_identity_v1",
+      "score_units": "arbitrary_score_units",
+      "z": 2.0,
+      "statistic": 1.0,
+      "k": 1.0,
+      "threshold": 5.0,
+      "crossing": false,
+      "state": "MONITORING",
+      "latched": false,
+      "needs_reset": false,
+      "reason": "below_threshold",
+      "config_version": "arithmetic_v1",
+      "config_sha256": "3ab3728ff9c7cf3f4480ba067574e74dfc51a3aed76333ef0f40db014cec23d3",
+      "input_metadata": {
+        "session_id": "synthetic_session",
+        "source_id": "synthetic_camera",
+        "score_version": "synthetic_behavior_v1",
+        "normalization_id": "synthetic_identity_v1",
+        "score_units": "arbitrary_score_units"
+      }
+    },
+    {
+      "method": "cusum",
+      "at_ms": 0,
+      "session_id": "second_session",
+      "source_id": "synthetic_camera",
+      "score": null,
+      "input_valid": null,
+      "available": false,
+      "quality_reason": "explicit_new_session_reset",
+      "score_version": "synthetic_behavior_v1",
+      "normalization_id": "synthetic_identity_v1",
+      "score_units": "arbitrary_score_units",
+      "z": null,
+      "statistic": 0.0,
+      "k": 1.0,
+      "threshold": 5.0,
+      "crossing": false,
+      "state": "UNKNOWN",
+      "latched": false,
+      "needs_reset": false,
+      "reason": "explicit_new_session_reset",
+      "config_version": "arithmetic_v1",
+      "config_sha256": "3ab3728ff9c7cf3f4480ba067574e74dfc51a3aed76333ef0f40db014cec23d3",
+      "input_metadata": null
+    }
+  ],
+  "clinical_and_camera_metrics": {
+    "event_sensitivity": "NOT MEASURED",
+    "false_alerts_per_eligible_non_event_hour": "NOT MEASURED",
+    "behavioral_detection_delay_seconds": "NOT MEASURED",
+    "missed_annotated_events": "NOT MEASURED",
+    "real_feature_availability": "NOT MEASURED",
+    "real_unknown_frequency": "NOT MEASURED",
+    "improvement_over_fixed_threshold": "NOT MEASURED",
+    "maximum_safe_delay": "NOT MEASURED"
+  },
+  "runtime": {
+    "cusum_mean_us_per_update": 8.496115,
+    "fixed_mean_us_per_update": 10.365405,
+    "updates_per_method": 20000,
+    "python": "3.13.2",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "interpretation": "Measured local Python update overhead only, not live latency or a deadline guarantee"
+  },
+  "baseline_comparison": "Identical synthetic inputs and lifecycle; arbitrary thresholds not matched for false-alert rate; not an empirical performance comparison"
+}

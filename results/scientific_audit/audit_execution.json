@@ -1,0 +1,8 @@
+{
+  "baseline_files_unchanged": true,
+  "all_four_method_metrics_recomputed": true,
+  "heldout_waveform_features_and_model_decisions_replayed": 225,
+  "split_integrity": true,
+  "scope": "Independent arithmetic and current-file checks plus replay of original functions; no external reviewer or clinical expert review claimed",
+  "saved_models_and_thresholds_unchanged": true
+}

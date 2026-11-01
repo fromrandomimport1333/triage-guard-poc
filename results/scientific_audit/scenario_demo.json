@@ -1,0 +1,75 @@
+{
+  "evidence": "authored synthetic observations; no diagnostic accuracy claim",
+  "cases": [
+    {
+      "case": "normal_responsive",
+      "scenario": "normal_driving",
+      "decision": {
+        "medical": "normal",
+        "capacity": "responsive",
+        "local_warning": false,
+        "oem_evaluation_request": false,
+        "contact_submission_eligible": false,
+        "ems_submission_eligible": false,
+        "notification_status": "no_notification_request",
+        "rationale": "strict_declared_source_corroboration_insufficient"
+      }
+    },
+    {
+      "case": "suspected_loss_of_responsiveness",
+      "scenario": "suspected_transient_loss_of_responsiveness",
+      "decision": {
+        "medical": "unknown",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "oem_evaluation_request": true,
+        "contact_submission_eligible": true,
+        "ems_submission_eligible": true,
+        "notification_status": "simulation_eligible_no_transmission_or_ack",
+        "rationale": "corroborated_incapacity_oem_evaluation_eligible"
+      }
+    },
+    {
+      "case": "seizure_like_unresponsive",
+      "scenario": "seizure_like_motor_activity",
+      "decision": {
+        "medical": "seizure_like",
+        "capacity": "corroborated_unresponsive",
+        "local_warning": true,
+        "oem_evaluation_request": true,
+        "contact_submission_eligible": true,
+        "ems_submission_eligible": true,
+        "notification_status": "simulation_eligible_no_transmission_or_ack",
+        "rationale": "corroborated_incapacity_oem_evaluation_eligible"
+      }
+    },
+    {
+      "case": "responsive_motor_confounder",
+      "scenario": "seizure_like_motor_activity",
+      "decision": {
+        "medical": "seizure_like",
+        "capacity": "responsive",
+        "local_warning": true,
+        "oem_evaluation_request": false,
+        "contact_submission_eligible": false,
+        "ems_submission_eligible": false,
+        "notification_status": "no_notification_request",
+        "rationale": "strict_declared_source_corroboration_insufficient"
+      }
+    },
+    {
+      "case": "missing_corroboration",
+      "scenario": "uncertain_event",
+      "decision": {
+        "medical": "unknown",
+        "capacity": "uncertain",
+        "local_warning": false,
+        "oem_evaluation_request": false,
+        "contact_submission_eligible": false,
+        "ems_submission_eligible": false,
+        "notification_status": "no_notification_request",
+        "rationale": "strict_declared_source_corroboration_insufficient"
+      }
+    }
+  ]
+}

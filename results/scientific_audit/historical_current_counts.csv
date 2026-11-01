@@ -1,0 +1,6 @@
+alarm,paper_false,paper_true,current_false,current_true
+Asystole,100,20,100,22
+Bradycardia,45,45,43,46
+Tachycardia,8,131,9,131
+Ventricular_Flutter_Fib,52,6,52,6
+Ventricular_Tachycardia,253,90,252,89

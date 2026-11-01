@@ -1,0 +1,10 @@
+{
+  "scope": "20 deterministic synthetic cases, NOT observed patients or validation accuracy",
+  "n_cases": 20,
+  "hard_negative_cases_blocked": 16,
+  "positive_control_request_eligible": true,
+  "ecg_failure_did_not_erase_independent_capacity_evidence": true,
+  "network_failure_did_not_erase_local_vehicle_evaluation_eligibility": true,
+  "source_ids_only_declare_independence_not_prove_it": true,
+  "clinical_accuracy_claim": false
+}
